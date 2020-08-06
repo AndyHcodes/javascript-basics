@@ -1,9 +1,15 @@
 const negate = a => {
-  // your code here
+  if(a=== true) {
+    return false;
+  }
 };
 
 const both = (a, b) => {
-  // your code here
+  if(a === true && b === true) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const either = (a, b) => {
