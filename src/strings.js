@@ -1,21 +1,18 @@
-const sayHello = string => "Hello, " + string + "!";
+const sayHello = (string) => "Hello, " + string + "!";
 
-const uppercase = string => {
+const uppercase = (string) => {
   return string.toUpperCase();
 };
-uppercase('abc');
-uppercase('def');
-uppercase('ghi');
 
-const lowercase = string => {
+const lowercase = (string) => {
   return string.toLowerCase();
 };
 
-const countCharacters = string => {
+const countCharacters = (string) => {
   return string.length;
 };
 
-const firstCharacter = string => {
+const firstCharacter = (string) => {
   return string.charAt(0);
 };
 
@@ -29,5 +26,5 @@ module.exports = {
   lowercase,
   countCharacters,
   firstCharacter,
-  firstCharacters
+  firstCharacters,
 };

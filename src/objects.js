@@ -1,41 +1,52 @@
 const createPerson = (name, age) => {
-  // your code here
+  return {
+    name: name,
+    age: age,
+  };
 };
 
-const getName = object => {
-  // your code here
+const getName = (object) => {
+  return object.name;
 };
 
 const getProperty = (property, object) => {
-  // your code here
+  return object[property];
 };
 
 const hasProperty = (property, object) => {
-  // your code here
+  if (object[property]) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const isOver65 = person => {
-  // your code here
+const isOver65 = (person) => {
+  return person.age > 65;
 };
 
-const getAges = people => {
-  // your code here
+const getAges = (people) => {
+  const mappedArr = people.map(function(person) {
+    return person.age;
+  });
+  return mappedArr;
 };
 
 const findByName = (name, people) => {
-  // your code here
+  // if people contains the name shopw the appropriate object, i.e Jim or Marjorie
 };
 
-const findHondas = cars => {
-  // your code here
+const findHondas = (cars) => {
+  // Looking for the objects that comtain Honda so will need to map with object / cars the return objects with Honda
 };
 
-const averageAge = people => {
-  // your code here
+const averageAge = (people) => {
+  // need to map people then average the values of the ages extracted
+  // This should be the same as get ages with an additional function to average the ages
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  // return name and age then add to string which introduces
 };
 
 module.exports = {
@@ -48,5 +59,5 @@ module.exports = {
   findByName,
   findHondas,
   averageAge,
-  createTalkingPerson
+  createTalkingPerson,
 };

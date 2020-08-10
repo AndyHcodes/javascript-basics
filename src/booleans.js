@@ -1,11 +1,13 @@
-const negate = a => {
-  if(a=== true) {
+const negate = (a) => {
+  if (a === true) {
     return false;
+  } else {
+    return true;
   }
 };
 
 const both = (a, b) => {
-  if(a === true && b === true) {
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -13,54 +15,93 @@ const both = (a, b) => {
 };
 
 const either = (a, b) => {
-  // your code here
+  if (a || b === true) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const none = (a, b) => {
-  // your code here
+  if (a || b === true) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 const one = (a, b) => {
-  // your code here
+  if (a === false && b === true) {
+    return true;
+  } else if (a === true && b === false) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const truthiness = a => {
+const truthiness = (a) => {
   // your code here
 };
 
 const isEqual = (a, b) => {
-  // your code here
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const isGreaterThan = (a, b) => {
-  // your code here
+  if (a > b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  // your code here
+  if (a <= b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const isOdd = a => {
-  // your code here
+const isOdd = (a) => {
+  if (a % 2) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const isEven = a => {
-  // your code here
+const isEven = (a) => {
+  if (a % 2) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
-const isSquare = a => {
-  // your code here
+const isSquare = (a) => {
+  return Math.sqrt(a) % 1 === 0;
 };
 
 const startsWith = (char, string) => {
-  // your code here
+  const letter = char;
+  if (string.startsWith(letter)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const containsVowels = string => {
-  // your code here
+const containsVowels = (string) => {
+  return string.match("[aeiouAEIOU]") !== null;
 };
 
-const isLowerCase = string => {
+const isLowerCase = (string) => {
   // your code here
 };
 
@@ -79,5 +120,5 @@ module.exports = {
   isSquare,
   startsWith,
   containsVowels,
-  isLowerCase
+  isLowerCase,
 };
