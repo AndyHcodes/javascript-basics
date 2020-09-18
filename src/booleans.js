@@ -41,7 +41,11 @@ const one = (a, b) => {
 };
 
 const truthiness = (a) => {
-  // your code here
+  if (a) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const isEqual = (a, b) => {
@@ -102,7 +106,7 @@ const containsVowels = (string) => {
 };
 
 const isLowerCase = (string) => {
-  // your code here
+  return string === string.toLowerCase();
 };
 
 module.exports = {

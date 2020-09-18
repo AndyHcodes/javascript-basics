@@ -62,19 +62,26 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = (strings) => {
-  // maps array and returns elements starting with a vowel returning upper and lowercase
+  let startsVowel = strings.filter((str) => /^[aeiou]/i.test(str));
+  return startsVowel;
 };
 
 const removeSpaces = (string) => {
-  // converts string to array then splices to remove spaces
+  return string.replace(/\s+/g, "");
 };
 
 const sumNumbers = (numbers) => {
-  // maps array and returns numbers then perfoms function to add
+  return numbers.reduce(function(accumalator, currentValue) {
+    return accumalator + currentValue;
+  }, 0);
 };
 
 const sortByLastLetter = (strings) => {
-  // your code here
+  return strings.sort(
+    (firstValue, secondValue) =>
+      firstValue.charCodeAt(firstValue.length - 1) -
+      secondValue.charCodeAt(secondValue.length - 1)
+  );
 };
 
 module.exports = {

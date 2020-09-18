@@ -1,3 +1,5 @@
+const { TestScheduler } = require("jest");
+
 const createPerson = (name, age) => {
   return {
     name: name,
@@ -33,20 +35,39 @@ const getAges = (people) => {
 };
 
 const findByName = (name, people) => {
-  // if people contains the name shopw the appropriate object, i.e Jim or Marjorie
+  let findPers = people.filter(function(findPerson) {
+    return findPerson.name === name;
+  });
+  for (var i = 0; i < findPers.length; i++) {
+    return findPers[i];
+  }
 };
 
 const findHondas = (cars) => {
-  // Looking for the objects that comtain Honda so will need to map with object / cars the return objects with Honda
+  let findCar = cars.filter(function(findHonda) {
+    return findHonda.manufacturer === "Honda";
+  });
+  return findCar;
 };
 
 const averageAge = (people) => {
-  // need to map people then average the values of the ages extracted
-  // This should be the same as get ages with an additional function to average the ages
+  const avAgeMap = people.map(function(person) {
+    return person.age;
+  });
+  let sum = avAgeMap.reduce(function(numA, numB) {
+    return numA + numB;
+  });
+  return sum / 3;
 };
 
 const createTalkingPerson = (name, age) => {
-  // return name and age then add to string which introduces
+  return {
+    name: name,
+    age: age,
+    introduce: function(inputName) {
+      return `Hi ${inputName}, my name is ${this.name} and I am ${this.age}!`;
+    },
+  };
 };
 
 module.exports = {
